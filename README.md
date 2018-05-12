@@ -7,7 +7,8 @@ Go App Engine Sample
 $ appcfg.py update app.yaml
 ```
 
-Now you running in your browser: <app-id>.appspot.com
+Now you running in your browser: {app-id}.appspot.com.
+In my case app-id is "ag-ifpb-pod". 
 
 # result
 
