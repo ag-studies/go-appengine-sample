@@ -14,9 +14,10 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	t := taskqueue.NewPOSTTask("/worker", map[string][]string{"key": {"val"}})
 	_, err := taskqueue.Add(ctx, t, "")
 	if err != nil {
-		log.Errorf(ctx, "Failed to add task")
+		log.Errorf(ctx, "Failed to add task", err.Error())
 	}
-	fmt.Fprintf(w, "Success")
+	fmt.Fprintf(w, "Handler Success")
+	log.Infof(ctx, "Handler succeeded")
 }
 
 func Worker(w http.ResponseWriter, r *http.Request) {

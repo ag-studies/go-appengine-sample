@@ -1,0 +1,3 @@
+queue:
+- name: mq
+  rate: 5/s
