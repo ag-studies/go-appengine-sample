@@ -11,7 +11,12 @@ import (
 	"time"
 )
 
-func TestTestHandler(t *testing.T) {
+func TestTempDir(t *testing.T) {
+	temp, _ := ioutil.TempDir("", "appengine-aetest")
+	t.Log(temp)
+}
+
+func TestHandler(t *testing.T) {
 	//
 	var out bytes.Buffer
 	//log
